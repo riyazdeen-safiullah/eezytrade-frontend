@@ -1,0 +1,216 @@
+.config-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  margin: 0;
+}
+
+.config-box {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  width: 100%;
+}
+
+.config-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.horizontal-group {
+  display: flex;
+  gap: 1rem;
+  text-align: left;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stock-selection-info {
+  color: #ff5722;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.stock-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stock-tag {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.stock-tag.selected {
+  background-color: #65E765;
+  color: black;
+  border-color: #65E765;
+}
+
+.stock-tag:hover {
+  background-color: #65E765;
+  color: black;
+}
+
+/* Stylized Sliders */
+input[type="range"] {
+  width: 50%; /* Reduced width for a professional appearance */
+  height: 6px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #0056b3;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background: #0056b3;
+}
+
+input[type="number"] {
+  width: 20%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+/* Specific Spacing for Total Capital, Support, and Resistance */
+.total-capital-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Support and Resistance Section */
+.support-resistance-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Ensure proper vertical spacing between sliders */
+  margin-top: 2rem;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem; /* Proper horizontal spacing between label and slider */
+  width: 90%;
+}
+
+.slider-container label {
+  flex: 1; /* Labels take equal width */
+  text-align: left; /* Align labels to the right for better alignment */
+  font-weight: bold;
+  color: #333;
+}
+
+.slider-container input[type="range"] {
+  flex: 3; /* Sliders take more space compared to labels */
+  width: auto; /* Allow slider to adjust dynamically */
+  margin-bottom: 1rem;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+  background: #007bff;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb:hover {
+  background: #0056b3;
+}
+
+.slider-container .value-label {
+  flex: 1; /* Add space for the value label */
+  text-align: left; /* Align value to the left of the slider */
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.btn-config-save {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.btn-config-save:hover {
+  background-color: #218838;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .config-box {
+    padding: 1.5rem;
+    width: 90%;
+  }
+
+  .horizontal-group {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .btn-config-save {
+    font-size: 0.9rem;
+  }
+}
