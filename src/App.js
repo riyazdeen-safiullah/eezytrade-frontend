@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate ,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProfileForm from "./components/ProfileForm";
@@ -19,20 +18,6 @@ const App = () => {
     <Router>
       {isAuthenticated && <Navbar />}
       <Routes>
-        {/* {!isAuthenticated ? (
-          <>
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="*" element={<Navigate to="/config" />} />
-          </>
-        ) : (
-          <>
-            <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<ProfileForm />} />
-            <Route path="/config" element={<ConfigForm />} />
-            <Route path="*" element={<Navigate to="/" />} />
-          </>
-        )} */}
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<ProfileForm />} />
         <Route path="/config" element={<ConfigForm />} />

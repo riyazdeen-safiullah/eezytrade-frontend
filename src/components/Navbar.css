@@ -1,19 +1,69 @@
+/* Navbar.css */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
-    padding: 1rem;
-    color: white;
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #002147; /* Navy Blue Background */
+  color: #FFFFFF; /* White Text */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.logo p {
+  font-size: 1rem;
+  margin-top: -10px;
+  color: #ddd; /* Light gray for the subtitle */
+}
+
+nav {
+  margin-bottom: 0.5rem; /* Adds spacing between navigation groups */
+}
+
+.nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 0.51rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: block; /* Ensures each link takes its own line */
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #87CEFA;
+  color: #002147;
+}
+
+.active-link {
+  background-color: #87CEFA;
+  color: #002147;
+}
+
+/* Adjust Spacing for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 180px;
+    padding: 0.5rem;
   }
-  
-  .navbar .links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
   }
-  
-  .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
+}

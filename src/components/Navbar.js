@@ -1,17 +1,31 @@
+// components/Navbar.js
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <h1 className="logo">EezyTrade</h1>
-      <div className="links">
-        <Link to="/profile">Profile</Link>
-        <Link to="/config">Config</Link>
-        <Link to="/dashboard">Dashboard</Link>
+    <div className="navbar">
+      <div className="logo">
+        <h1>EezyTrade</h1>
+        <p>Your Trade Made Easy</p>
       </div>
-    </nav>
+      <nav>
+        <NavLink to="/profile" activeClassName="active-link" className="nav-link">
+          Profile Update
+        </NavLink>
+      </nav>
+      <nav>
+        <NavLink to="/config" activeClassName="active-link" className="nav-link">
+          Trading Configuration
+        </NavLink>
+        </nav>
+        <nav>
+        <NavLink to="/" activeClassName="active-link" className="nav-link">
+          Signout
+        </NavLink>
+      </nav>
+    </div>
   );
 };
 

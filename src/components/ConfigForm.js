@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 import "./ConfigForm.css";
 
 const ConfigForm = () => {
@@ -7,7 +8,7 @@ const ConfigForm = () => {
   const [support, setSupport] = useState(1);
   const [resistance, setResistance] = useState(1);
   const [isFirstTime, setIsFirstTime] = useState(true);
-  const [selectedInstrument, setSelectedInstrument] = useState(""); // Default: No selection
+  const [selectedInstrument, setSelectedInstrument] = useState("");
 
   const allStocks = ["HDFCBANK", "RELIANCE", "ICICIBANK", "INFY", "ITC",
     "TCS", "AXISBANK", "LT", "KOTAKBANK", "HINDUNILVR",
@@ -19,10 +20,12 @@ const ConfigForm = () => {
     "ADANIENT", "HINDALCO", "HDFCLIFE", "TECHM", "TATASTEEL",
     "ONGC", "ULTRACEMCO", "GRASIM", "EICHERMOT", "DIVISLAB",
     "HEROMOTOCO", "NTPC", "MARUTI", "BAJAJ-AUTO", "DRREDDY"]; // Mock 50 stocks
-  const shariahStocks = ["Stock3", "Stock7", "Stock10", "Stock12", "Stock14",
-    "Stock16", "Stock19", "Stock20", "Stock25", "Stock26",
-    "Stock28", "Stock31", "Stock35", "Stock37", "Stock40",
-    "Stock43", "Stock44", "Stock47", "Stock49", "Stock50"]; // Mock Shariah-compliant stocks
+
+  const shariahStocks = ["RELIANCE", "INFY", "TCS", "HINDUNILVR", "HCLTECH",
+    "WIPRO", "NESTLEIND", "CIPLA", "TATACONSUM", "SUNPHARMA",
+    "ASIANPAINT", "COALINDIA", "APOLLOHOSP", "LTIM", "BRITANNIA",
+    "ADANINET", "TECHM", "ULTRACEMO", "EICHERMOT", "DIVISLAB",
+    "HEROMOTOCO", "MARUTI", "BAJAJ-AUTO", "DRREDDY"]; // Mock Shariah-compliant stocks
 
   const handleInstrumentChange = (instrument) => {
     setSelectedInstrument(instrument);
@@ -58,14 +61,15 @@ const ConfigForm = () => {
   const displayedStocks =
     selectedInstrument === "Shariah" ? shariahStocks : allStocks;
 
-  return (
-    <div className="config-container">
-      <div className="config-box">
-        <h2 className="config-heading">Trading Configuration</h2>
+    return (
+      <div className="config-container">
+        <Navbar />
+        <div>
+          <h2 className="config-heading">Trading Configuration</h2>
         <form onSubmit={handleSubmit}>
           {/* Instrument Selection */}
           <div className="form-group">
-            <h3>Select Instruments</h3>
+            <h2>Select Instruments</h2>
             <div className="horizontal-group">
               <label>
                 <input
@@ -107,7 +111,7 @@ const ConfigForm = () => {
                 Minimum 10 stocks should be selected
               </p>
             )}
-            <h3>Select Stocks</h3>
+            <h2>Select Stocks</h2>
             <div className="stock-selection">
               {displayedStocks.map((stock) => (
                 <span
@@ -125,7 +129,7 @@ const ConfigForm = () => {
 
           {/* Capital Input */}
           <div className="form-group">
-            <h3>Total Capital (Minimum: INR {stocks.length * 10000})</h3>
+            <h2>Total Capital (Minimum: INR {stocks.length * 10000})</h2>
             <input
               type="range"
               min={stocks.length * 10000 || 10000}
@@ -142,11 +146,11 @@ const ConfigForm = () => {
 
           {/* Support and Resistance */}
           <div className="form-group">
-          <h3>Support and Resistance Configuration</h3>
+          <h2>Support and Resistance</h2>
           <div className="support-resistance-group">
             {/* Support Slider */}
             <div className="slider-container">
-              <label>Support % (1–10):</label>
+              <label>Support % (1–10)</label>
               <input
                 type="range"
                 min="1"
@@ -159,7 +163,7 @@ const ConfigForm = () => {
 
             {/* Resistance Slider */}
             <div className="slider-container">
-              <label>Resistance % (1–6):</label>
+              <label>Resistance % (1–6)</label>
               <input
                 type="range"
                 min="1"

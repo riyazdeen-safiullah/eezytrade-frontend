@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 import "./ProfileForm.css";
 
 const ProfileForm = () => {
@@ -20,8 +21,9 @@ const ProfileForm = () => {
 
   return (
     <div className="profile-container">
-      <div className="profile-box">
-        <h2>Update Profile</h2>
+      <Navbar />
+      <h2 className="profile-heading">Update Profile</h2>
+      <div className="form-container">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Name</label>

@@ -1,35 +1,43 @@
+/* ProfileForm.css */
 .profile-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align elements from the top */
+  align-items: center; /* Center-align elements horizontally */
+  min-height: 100vh;
+  background: #ffffff; /* White background */
   font-family: Arial, sans-serif;
-  margin: 0;
-}
-
-.profile-box {
-  background-color: #ffffff;
+  margin-left: 250px; /* Space for the navbar */
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 400px;
 }
 
-.profile-box .form-group {
+.profile-heading {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #002147;
+  font-weight: bold;
+  width: 100%;
+  text-align: center; /* Center-align text */
+}
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-group {
   margin-bottom: 1.5rem;
-  text-align: left;
 }
 
-.profile-box label {
+.form-group label {
   display: block;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: #002147;
 }
 
-.profile-box input {
+input {
   width: 100%;
   padding: 0.8rem;
   border: 1px solid #ccc;
@@ -47,6 +55,7 @@
   cursor: pointer;
   border-radius: 5px;
   width: 100%;
+  font-weight: bold;
 }
 
 .btn-save:hover {
