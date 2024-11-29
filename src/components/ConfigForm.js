@@ -20,10 +20,12 @@ const ConfigForm = () => {
     "ADANIENT", "HINDALCO", "HDFCLIFE", "TECHM", "TATASTEEL",
     "ONGC", "ULTRACEMCO", "GRASIM", "EICHERMOT", "DIVISLAB",
     "HEROMOTOCO", "NTPC", "MARUTI", "BAJAJ-AUTO", "DRREDDY"]; // Mock 50 stocks
-  const shariahStocks = ["Stock3", "Stock7", "Stock10", "Stock12", "Stock14",
-    "Stock16", "Stock19", "Stock20", "Stock25", "Stock26",
-    "Stock28", "Stock31", "Stock35", "Stock37", "Stock40",
-    "Stock43", "Stock44", "Stock47", "Stock49", "Stock50"]; // Mock Shariah-compliant stocks
+
+  const shariahStocks = ["RELIANCE", "INFY", "TCS", "HINDUNILVR", "HCLTECH",
+    "WIPRO", "NESTLEIND", "CIPLA", "TATACONSUM", "SUNPHARMA",
+    "ASIANPAINT", "COALINDIA", "APOLLOHOSP", "LTIM", "BRITANNIA",
+    "ADANINET", "TECHM", "ULTRACEMO", "EICHERMOT", "DIVISLAB",
+    "HEROMOTOCO", "MARUTI", "BAJAJ-AUTO", "DRREDDY"]; // Mock Shariah-compliant stocks
 
   const handleInstrumentChange = (instrument) => {
     setSelectedInstrument(instrument);
