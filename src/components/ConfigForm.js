@@ -9,7 +9,16 @@ const ConfigForm = () => {
   const [isFirstTime, setIsFirstTime] = useState(true);
   const [selectedInstrument, setSelectedInstrument] = useState(""); // Default: No selection
 
-  const allStocks = Array.from({ length: 50 }, (_, i) => `Stock${i + 1}`); // Mock 50 stocks
+  const allStocks = ["HDFCBANK", "RELIANCE", "ICICIBANK", "INFY", "ITC",
+    "TCS", "AXISBANK", "LT", "KOTAKBANK", "HINDUNILVR",
+    "SBIN", "HCLTECH", "UPL", "M&M", "POWERGRID",
+    "WIPRO", "JSWSTEEL", "SBILIFE", "NESTLEIND", "BAJAJFINSV",
+    "BPCL", "INDUSINDBK", "CIPLA", "TATACONSUM", "TATAMOTORS",
+    "ADANIPORTS", "SUNPHARMA", "ASIANPAINT", "COALINDIA", "APOLLOHOSP",
+    "TITAN", "LTIM", "BRITANNIA", "BAJFINANCE", "BHARTIARTL",
+    "ADANIENT", "HINDALCO", "HDFCLIFE", "TECHM", "TATASTEEL",
+    "ONGC", "ULTRACEMCO", "GRASIM", "EICHERMOT", "DIVISLAB",
+    "HEROMOTOCO", "NTPC", "MARUTI", "BAJAJ-AUTO", "DRREDDY"]; // Mock 50 stocks
   const shariahStocks = ["Stock3", "Stock7", "Stock10", "Stock12", "Stock14",
     "Stock16", "Stock19", "Stock20", "Stock25", "Stock26",
     "Stock28", "Stock31", "Stock35", "Stock37", "Stock40",
